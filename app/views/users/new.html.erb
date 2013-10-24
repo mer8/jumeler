@@ -1,0 +1,28 @@
+
+<h1>Create a New User</h1>
+<%=form_for @user do |user|%>
+
+<p>
+	<%=user.label :email, "Email"%>
+	<%=user.text_field :email %>
+</p>
+
+<p>
+	<%=user.label :password, "Password"%>
+	<%=user.text_field :password %>
+</p>
+
+<p>
+	<%=user.label :password_confirmation, "Password Confirmation"%>
+	<%=user.text_field :password_confirmation %>
+</p>
+
+<p>
+<%= user.submit %>
+</p>
+
+
+<%end%>
+
+<hr />
+User id: <%= session[:user_id] %>
