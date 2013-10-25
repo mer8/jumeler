@@ -1,0 +1,109 @@
+@import 'bootstrap';
+
+
+$maincolor: white;
+
+
+body {
+	background-color: $maincolor;
+	font-family: Helvetica;
+}
+
+a:link, a:visited, a:disabled {
+	color: black;
+}
+
+#container {
+	background-color: #eee;
+	width: 600px;
+	margin: 0 auto;	
+}
+
+header {
+	font-size: 30px;
+
+
+}
+#indexcontainer {
+
+	margin: 20px;
+	background-color: grey;
+
+	h1{
+		color: blue;
+
+	}
+	table {
+		color: #ff3366;
+	}
+
+	th {
+		color: #F1A6F1;
+	}
+
+	tr {
+		color: purple;
+	}
+
+	.mybutton {
+	   border-top: 1px solid #96d1f8;
+	   background: #d2d665;
+	   background: -webkit-gradient(linear, left top, left bottom, from(#fc0000), to(#d2d665));
+	   background: -webkit-linear-gradient(top, #fc0000, #d2d665);
+	   background: -moz-linear-gradient(top, #fc0000, #d2d665);
+	   background: -ms-linear-gradient(top, #fc0000, #d2d665);
+	   background: -o-linear-gradient(top, #fc0000, #d2d665);
+	   padding: 5px 10px;
+	   -webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	   border-radius: 8px;
+	   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	   box-shadow: rgba(0,0,0,1) 0 1px 0;
+	   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+	   color: white;
+	   font-size: 13px;
+	   font-family: Georgia, serif;
+	   text-decoration: none;
+	   vertical-align: middle;
+	   }
+	.mybutton:hover {
+	   border-top-color: #28597a;
+	   background: #28597a;
+	   color: #ccc;
+	   }
+	.mybutton:active {
+	   border-top-color: #1b435e;
+	   background: #1b435e;
+	   }
+}
+
+#newcontainer {
+	margin: 15px;
+	background-color: orange;
+
+
+	h1 {
+		color: black;
+	}
+
+	
+}
+
+#calcontainer {
+	margin: 0 auto;
+	width: 1000px;
+	background-color: orange;
+
+	.col-md-1 {
+		font-family: Helvetica;
+		font-size: 11px;
+		height: 120px;
+		width: 120px;
+		border: 2px solid black;
+		background-color: #A6CBF1;
+	}
+}
+
+
+

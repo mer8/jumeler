@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Programming</title>
+  <title>Jumeler</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -18,10 +18,14 @@
     <li><a href="/authentications/new">Log In</a></li>
 
 	</ul>
+  <% if current_user %>
+    <%= button_to "Log Out", "/authentications", method: :delete %>
+    <% end %>
 </nav>
 
 <%= yield %>
 
-<footer>Here's a footer!</footer>
+
 </body>
+<footer>Here's a footer!</footer>
 </html>

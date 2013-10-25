@@ -4,12 +4,18 @@ Jumeler::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root to: 'welcome#index'
-  resources :authentications
+  
+
+  get 'authentications/new' => 'authentications#new'
+  delete 'authentications' => 'authentications#destroy'
+  post 'authentications' => 'authentications#create'
 
   get 'users' => 'users#index'
   get 'users/new' => 'users#new'
   get 'users/:id' => 'users#show'
   post 'users' => 'users#create'
+
+  #get 'signin' => 'authentications#new'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

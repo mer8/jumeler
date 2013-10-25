@@ -10,10 +10,12 @@ class User
 	field :hashed_password, type: String
 
 
-  before_save :hash_password
+
   validates :email, presence: true
   validates :email, uniqueness: { case_sensitive: false }
   validates :password, confirmation: true
+
+  before_save :hash_password
 
   def authenticate(password)
     self.hashed_password ==

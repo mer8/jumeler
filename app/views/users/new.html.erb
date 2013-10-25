@@ -22,7 +22,32 @@
 </p>
 
 
-<%end%>
+<% end %>
 
+
+<% if current_user %>
+	Guess what, you're logged in as <%= current_user.email %>!
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% if current_user %>
+	Guess what, you're logged in as <%= current_user.email %>!
+<% end %>
 <hr />
 User id: <%= session[:user_id] %>
