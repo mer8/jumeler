@@ -1,28 +1,16 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Jumeler
+-Login
+-Users
+-Add friends
+-Input personal calendar info
+-Show as free or busy
+-Select friends
+-Match mutual availability 
+-Select a date and send to friend for confirmation/approval
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+-Lists events in and between your pair's city and yours
+-Allows you and pair to select 3 events each
+-Share selection with friend
+-Agree on event
+-Sets the event in your calendars
