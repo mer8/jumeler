@@ -7,6 +7,7 @@ $maincolor: white;
 body {
 	background-color: $maincolor;
 	font-family: Helvetica;
+	background-image: url('https://c676132.ssl.cf0.rackcdn.com/unicorn-cat-51a66b5c3fbe7.jpg');
 }
 
 a:link, a:visited, a:disabled {
@@ -20,6 +21,7 @@ a:link, a:visited, a:disabled {
 }
 
 header {
+	position: center;
 	font-size: 30px;
 
 
@@ -27,10 +29,10 @@ header {
 #indexcontainer {
 
 	margin: 20px;
-	background-color: grey;
+	background-color: #C8D3DE;
 
 	h1{
-		color: blue;
+		color: black;
 
 	}
 	table {
@@ -38,11 +40,11 @@ header {
 	}
 
 	th {
-		color: #F1A6F1;
+		color: black;
 	}
 
 	tr {
-		color: purple;
+		color: black;
 	}
 
 	.mybutton {
@@ -92,16 +94,17 @@ header {
 
 #calcontainer {
 	margin: 0 auto;
-	width: 1000px;
+	width: 740px;
 	background-color: orange;
 
 	.col-md-1 {
 		font-family: Helvetica;
-		font-size: 11px;
-		height: 120px;
-		width: 120px;
-		border: 2px solid black;
-		background-color: #A6CBF1;
+		font-size: 12px;
+		height: 100px;
+		width: 100px;
+		border: 1px solid black;
+		background-color: #C8D3DE;
+		opacity: 9pt;
 	}
 }
 
