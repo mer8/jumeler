@@ -9,7 +9,8 @@ class User
 	field :salt, type: String
 	field :hashed_password, type: String
 
-
+  # This will tell us what regions to show on the map
+  # has_and_belongs_to_many :uevents, class_name:"Event", inverse_of: :eusers
 
   validates :email, presence: true
   validates :email, uniqueness: { case_sensitive: false }
