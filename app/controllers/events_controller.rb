@@ -1,6 +1,10 @@
 class EventsController < ApplicationController
 	def index
-		@events = Event.all
+		if current_user
+			@events = current_user.uevents
+		else
+			redirect_to root_url
+		end
 	end
 
 	def new
@@ -15,7 +19,7 @@ class EventsController < ApplicationController
 		# I commented below out bc. I was tring to make it so you have to fill in the fields otherwise you'll get an error. I can't get it to work
 		# if params[:date][:time][:name].present?
 
-		e = Event.create(params[:event].permit(:date, :time, :name))
+		current_user.uevents.create(params[:event].permit(:date, :time, :name))
 		redirect_to events_url
 		# I comment this below out because it was redirecting to a bad page
 		# :action => "show" , :id =>@event._id
@@ -29,7 +33,13 @@ class EventsController < ApplicationController
 		# end
 	end
 
+	# def edit
+	# 	@event = Event.edit
+	# end
 
+	# def update
+	# 	current_user.uevents.update(params[:event].permit(:date, :time, :name))
+	# end
 
 
 	def destroy

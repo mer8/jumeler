@@ -9,12 +9,17 @@
     <th></th>
   </tr>
   <% @events.each do |event| %>
+  
     <tr>
       <td><%= event.date %></td>
       <td><%= event.time %></td>
       <td><%= event.name %></td>
-      <td><%= button_to "X", { action: "destroy", id: event.id}, {method: :delete, data:{confirm:"Are you damned sure???"}, :class => "mybutton"}
-      %></td>
+      <td>
+        <% if (current_user.is_admin) || (current_user.uevents.include? event) %>
+        <%= button_to "X", { action: "destroy", id: event.id}, {method: :delete, data:{confirm:"Are you damned sure???"}, :class => "mybutton"}
+      %>
+      <% end %>
+    </td>
     </tr>
   <% end %>
 </table>
