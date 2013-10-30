@@ -1,6 +1,6 @@
 
 <h1>Edit Event</h1>
-<%= form_for @events do |event|%>
+<%= form_for :event do |event| %>
 <p>
 	<%= event.label :date, "Date"%>
 	<%= event.date_field :date %>
@@ -21,7 +21,3 @@
 </p>
 
 <%end%>
-
-
-
-

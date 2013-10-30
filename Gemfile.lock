@@ -77,6 +77,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25)
     minitest (4.7.5)
+    mongo_followable (0.3.2)
     moped (2.0.0.beta3)
       bson (~> 2.0.0.rc3)
       optionable (~> 0.1.1)
@@ -152,6 +153,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  mongo_followable
   mongoid!
   rails (= 4.0.0)
   rails_12factor

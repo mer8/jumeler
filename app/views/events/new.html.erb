@@ -1,6 +1,7 @@
 
 <h1>Enter a new event.</h1>
-<%= form_for @event do |event|%>
+<%= form_for @event do |event| %>
+	Event is: <%= @event.id %>
 <p>
 	<%= event.label :date, "Date"%>
 	<%= event.date_field :date %>
@@ -8,12 +9,12 @@
 
 <p>
 	<%= event.label :time, "Time"%>
-	<%= event.text_field :time %>
+	<%= event.time_field :time %>
 </p>
 
 <p>
 	<%= event.label :name, "Name"%>
-	<%= event.text_field :name %>
+	<%= event.text_field :name, :placeholder => "Event name" %>
 </p>
 
 <p>
@@ -21,7 +22,3 @@
 </p>
 
 <%end%>
-
-
-
-

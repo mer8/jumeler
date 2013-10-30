@@ -3,18 +3,22 @@
 <%=form_for @user do |user|%>
 
 <p>
+	<%=user.label :username, "Username"%>
+	<%=user.text_field :username, :placeholder => "Enter your username"%>
+
+<p>
 	<%=user.label :email, "Email"%>
-	<%=user.text_field :email %>
+	<%=user.text_field :email, :placeholder => "Enter your email" %>
 </p>
 
 <p>
 	<%=user.label :password, "Password"%>
-	<%=user.text_field :password %>
+	<%=user.text_field :password, :placeholder => "Enter password" %>
 </p>
 
 <p>
 	<%=user.label :password_confirmation, "Password Confirmation"%>
-	<%=user.text_field :password_confirmation %>
+	<%=user.text_field :password_confirmation, :placeholder => "Re-enter password" %>
 </p>
 
 <p>
@@ -25,25 +29,12 @@
 <% end %>
 
 
+
+
+
 <% if current_user %>
 	Guess what, you're logged in as <%= current_user.email %>!
 <% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <% if current_user %>
@@ -51,3 +42,6 @@
 <% end %>
 <hr />
 User id: <%= session[:user_id] %>
+
+
+

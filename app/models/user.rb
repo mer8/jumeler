@@ -5,6 +5,8 @@ class User
 
 	attr_accessor :password, :password_confirmation
 
+
+  field :username, type: String
 	field :email, type: String
 	field :salt, type: String
 	field :hashed_password, type: String

@@ -4,13 +4,20 @@ Jumeler::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root to: 'welcome#index'
-  
-  get 'events' => 'events#index'
-  get 'events/new' => 'events#new'
-  get 'events/:id' => 'events#show'
 
-  post 'events' => 'events#create'
-  delete 'events/:id' => 'events#destroy'
+  post 'events/:id/edit' => 'events#update'
+
+  resources :events
+
+  # get 'events' => 'events#index'
+  # get 'events/new' => 'events#new'
+  # get 'events/edit/:id' => 'events#edit'
+  # get 'events/:id' => 'events#show'
+
+  # # post 'events/edit' => 'events#edit'
+
+  # post 'events' => 'events#create'
+  # delete 'events/:id' => 'events#destroy'
 
 
   get 'authentications/new' => 'authentications#new'

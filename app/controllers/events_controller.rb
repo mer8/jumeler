@@ -13,6 +13,10 @@ class EventsController < ApplicationController
 
 	def show
 		@event = Event.find(params[:id])
+		
+		# @event = Event.all
+		# render :json => @event
+
 	end
 
 	def create
@@ -33,13 +37,25 @@ class EventsController < ApplicationController
 		# end
 	end
 
-	# def edit
-	# 	@event = Event.edit
-	# end
 
-	# def update
-	# 	current_user.uevents.update(params[:event].permit(:date, :time, :name))
-	# end
+	# I commented this out bc. I was getting an error in the Edit Event tab
+	def edit
+		@event = Event.find(params[:id])
+
+	end
+
+	def update
+		@event = Event.find(params[:id])
+
+		if @event.update_attributes(params[:event].permit(:date, :time, :name))
+			redirect_to action: 'show', id: @event
+		else
+			render 'edit'
+		end
+	end
+
+
+
 
 
 	def destroy
