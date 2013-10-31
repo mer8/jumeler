@@ -9,6 +9,7 @@ Jumeler::Application.routes.draw do
 
   resources :events
 
+
   # get 'events' => 'events#index'
   # get 'events/new' => 'events#new'
   # get 'events/edit/:id' => 'events#edit'

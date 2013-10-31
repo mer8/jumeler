@@ -47,7 +47,12 @@ header {
 		color: black;
 	}
 
+
+	.button_to {
+		display: inline;
+	}
 	.mybutton {
+		display: inline;
 	   border-top: 1px solid #96d1f8;
 	   background: #d2d665;
 	   background: -webkit-gradient(linear, left top, left bottom, from(#fc0000), to(#d2d665));
