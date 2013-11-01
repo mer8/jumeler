@@ -16,8 +16,7 @@
       <td><a href='/events/edit/<%= event.id%>'> <%= event.name %> </a></td>
       <td>
         <% if (current_user.is_admin) || (current_user.uevents.include? event) %>
-        <%= button_to "DELETE", { action: "destroy", id: event.id}, {method: :delete, data:{confirm:"Are you damned sure???"}, :class => "mybutton"}
-      %>
+        <%= button_to "DELETE", { action: "destroy", id: event.id}, {method: :delete, data:{confirm:"Are you damned sure???"}, :class => "mybutton"}%>
         <%= link_to 'EDIT', edit_event_path(event), :class => "mybutton" %>
       <% end %>
     </td>

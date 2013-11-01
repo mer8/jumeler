@@ -7,7 +7,7 @@ Jumeler::Application.routes.draw do
 
   post 'events/:id/edit' => 'events#update'
 
-  resources :events
+  resources :events, :friends
 
 
   # get 'events' => 'events#index'

@@ -18,6 +18,9 @@ class User
   has_and_belongs_to_many :uevents, class_name:"Event", 
     inverse_of: :eusers
 
+  has_many :origin_friends, class_name:"Friend", inverse_of: :origin_friend
+  has_many :destination_friends, class_name:"Friend", inverse_of: :destination_friend
+
 
 
 
