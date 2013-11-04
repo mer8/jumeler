@@ -6,7 +6,10 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<header>Jumeler</header>
+<header>
+  <div id="headerimg"> <a href="http://s1363.photobucket.com/user/mer831/media/uni-catheader_zps93f16917.png.html" target="_blank"><img src="http://i1363.photobucket.com/albums/r701/mer831/uni-catheader_zps93f16917.png" height="200px" alt="unicat photo uni-catheader_zps93f16917.png"/></a> 
+  </div>
+</header>
 <body>
   <nav>
   	<ul class="nav nav-tabs">
@@ -18,17 +21,22 @@
     <li><a href="/authentications/new">Log In</a></li>
     <li><a href="/events">List of Events</a></li>
     <li><a href="/events/new">Create New Event</a></li>
-    <li><a href="/events/ponies">Super Fun Time</a></li>
-
-	</ul>
-  <% if current_user %>
+    <!-- <li><a href="/events/ponies">Super Fun Time</a></li> -->
+    <li><a style="color: black"><% if current_user %>
+  Howdy! You're logged in as <%= current_user.username %>!
+<% end %></a></li>
+    <li><a>  <% if current_user %>
     <%= button_to "Log Out", "/authentications", method: :delete %>
-    <% end %>
+    <% end %></a></li>
+	</ul>
+
 </nav>
 
 <%= yield %>
 
-
+<div id="footer">
+<footer>This is a footer with nothing in it. Except for this text. Yeah.</footer>
+</div>
 </body>
-<footer>Here's a footer!</footer>
+
 </html>

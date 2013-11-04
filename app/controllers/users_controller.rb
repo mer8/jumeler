@@ -13,6 +13,8 @@ class UsersController < ApplicationController
 		@user = User.all
 	end
 
+	def makeadmin
+	end
 
 	# def show
 	# 	@user = User.find(params[:id])

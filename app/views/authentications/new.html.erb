@@ -1,20 +1,8 @@
-<h1>Log In</h1>
-<%= form_for @user, {url:"/authentications", method:"post"} do |user|%>
-
-<p>
-	<%=user.label :email, "Email"%>
-	<%=user.text_field :email, :placeholder => "Your email" %>
-</p>
-
-<p>
-	<%=user.label :password, "Password"%>
-	<%=user.text_field :password, :placeholder => "Your password" %>
-</p>
-
-<p>
-<%= user.submit "Log In" %>
-</p>
-
-<%end%>
-
-<hr />
+<div class="login">
+	<h1>Log In</h1>
+	<%= form_for @user, {url:"/authentications", method:"post"} do |user|%>
+	<%=user.text_field :email, :placeholder => "Your email" %><br>
+	<%=user.password_field :password, :placeholder => "Your password" %><br>
+	<%= user.submit "Log In" %>
+	<%end%>
+</div>

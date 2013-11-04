@@ -7,8 +7,8 @@ $maincolor: white;
 body {
 	background-color: $maincolor;
 	font-family: Helvetica;
-	background-image: url('https://c676132.ssl.cf0.rackcdn.com/unicorn-cat-51a66b5c3fbe7.jpg');
-}
+/*	background-image: url('https://c676132.ssl.cf0.rackcdn.com/unicorn-cat-51a66b5c3fbe7.jpg');
+*/}
 
 a:link, a:visited, a:disabled {
 	color: black;
@@ -21,17 +21,22 @@ a:link, a:visited, a:disabled {
 }
 
 header {
-	position: center;
-	font-size: 50px;
+	color: grey; 
+	height: 205px;
+	font-size: 35px;
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #FFFFFF), color-stop(1, #FA8F89));
+}
 
+#headerimg {
+	float: left bottom;
 
 }
 #indexcontainer {
 
 	margin: 20px;
-	background-color: #C8D3DE;
 
-	h1{
+
+	h1 {
 		color: black;
 
 	}
@@ -47,30 +52,31 @@ header {
 		color: black;
 	}
 
-
-	.button_to {
+	#eventsbuttons {
 		display: inline;
 	}
+
+	
 	.mybutton {
 		display: inline;
-	   border-top: 1px solid #96d1f8;
-	   background: #d2d665;
-	   background: -webkit-gradient(linear, left top, left bottom, from(#fc0000), to(#d2d665));
-	   background: -webkit-linear-gradient(top, #fc0000, #d2d665);
-	   background: -moz-linear-gradient(top, #fc0000, #d2d665);
-	   background: -ms-linear-gradient(top, #fc0000, #d2d665);
-	   background: -o-linear-gradient(top, #fc0000, #d2d665);
+	   border-top: 1px solid #ffffff;
+	   background: #FA8F89;
+	   background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#FA8F89));
+	   background: -webkit-linear-gradient(top, #FFFFFF, #FA8F89);
+	   background: -moz-linear-gradient(top, #ffffff, #FA8F89);
+	   background: -ms-linear-gradient(top, #ffffff, #FA8F89);
+	   background: -o-linear-gradient(top, #ffffff, #FA8F89);
 	   padding: 5px 10px;
-	   -webkit-border-radius: 8px;
-	   -moz-border-radius: 8px;
-	   border-radius: 8px;
+	   -webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	   border-radius: 4px;
 	   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
 	   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
 	   box-shadow: rgba(0,0,0,1) 0 1px 0;
 	   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-	   color: white;
+	   color: grey;
 	   font-size: 13px;
-	   font-family: Georgia, serif;
+	   font-family: Helvetica;
 	   text-decoration: none;
 	   vertical-align: middle;
 	   }
@@ -85,22 +91,24 @@ header {
 	   }
 }
 
+li {
+	list-style-type: none;
+}
+
+
 #newcontainer {
 	margin: 15px;
-	background-color: orange;
-
 
 	h1 {
 		color: black;
 	}
-
-	
 }
 
 #calcontainer {
+	padding: 18px;
 	margin: 0 auto;
 	width: 740px;
-	background-color: orange;
+
 
 	.col-md-1 {
 		font-family: Helvetica;
@@ -112,6 +120,158 @@ header {
 		opacity: 9pt;
 	}
 }
+
+/*This is for my LOGIN page
+*/
+.login {
+	margin-top: 50px;
+	margin: 0 auto;
+	width: 300px;
+	padding: 15px 30px;
+	background-color: white;
+	border: 3px solid #FA8F89;
+	box-shadow: 0 0 15px #FA8F89;
+}
+
+.login h1 {
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.login form {
+	text-align: center;
+}
+
+.login input {
+	background-image: none;
+	border: none;
+	border-bottom: 1px solid black;
+	padding: 5px 10px;
+}
+
+.login input[type="submit"] {
+	margin-top: 10px;
+	border: none;
+	padding: 10px 20px;
+	background-color: #FA8F89;
+	border-radius: 4px;
+}
+
+.login input:focus {
+	outline: #FA8F89;
+}
+	
+
+/*This is styling for my CREATE A NEW USER PAGE
+*/
+.createuser {
+	margin-top: 50px;
+	margin: 0 auto;
+	width: 300px;
+	padding: 15px 30px;
+	background-color: white;
+	border: 3px solid #FA8F89;
+	box-shadow: 0 0 15px #FA8F89;
+}
+
+.createuser h1 {
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.createuser form {
+	text-align: center;
+}
+
+.createuser input {
+	background-image: none;
+	border: none;
+	border-bottom: 1px solid black;
+	padding: 5px 10px;
+}
+
+.createuser input[type="submit"] {
+	margin-top: 10px;
+	border: none;
+	padding: 10px 20px;
+	background-color: #FA8F89;
+	border-radius: 4px;
+}
+
+.createuser input:focus {
+	outline: #FA8F89;
+}
+
+
+/*This is for NEW EVENT PAGE
+*/
+.newevent {
+	margin-top: 50px;
+	margin: 0 auto;
+	width: 300px;
+	padding: 15px 30px;
+	background-color: white;
+	border: 3px solid #FA8F89;
+	box-shadow: 0 0 15px #FA8F89;
+}
+
+.newevent h1 {
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.newevent form {
+	text-align: center;
+}
+
+.newevent input {
+	background-image: none;
+	border: none;
+	border-bottom: 1px solid black;
+	padding: 5px 10px;
+}
+
+.newevent input[type="submit"] {
+	margin-top: 10px;
+	border: none;
+	padding: 10px 20px;
+	background-color: #FA8F89;
+	border-radius: 4px;
+}
+
+.newevent input:focus {
+	outline: #FA8F89;
+}
+
+
+#footer {
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFFFFF), color-stop(1, #FA8F89));
+	position: absolute;
+	height: 110px;
+	width: 1200px;
+	margin: 0 auto;
+	z-index: 1;
+	top: 800px;
+}
+
+/*This is to clean up the cluttering issues with USER LIST
+*/
+.ulistcleanup {
+	height: 35px;
+	width: 500px;
+}
+
+h1 {
+	font-size: 25px;
+
+
+}
+
+
+
 
 
 

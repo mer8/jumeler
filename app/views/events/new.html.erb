@@ -1,24 +1,19 @@
-
+<div class="newevent">
 <h1>Enter a new event.</h1>
-<%= form_for @event do |event| %>
-	Event is: <%= @event.id %>
-<p>
-	<%= event.label :date, "Date"%>
-	<%= event.date_field :date %>
-</p>
+	<%= form_for @event do |event| %>
+		Event ID is: <%= @event.id %><br>
 
-<p>
-	<%= event.label :time, "Time"%>
-	<%= event.time_field :time %>
-</p>
+		<%= event.label :name, "Name"%>
+		<%= event.text_field :name, :placeholder => "Event name" %>
 
-<p>
-	<%= event.label :name, "Name"%>
-	<%= event.text_field :name, :placeholder => "Event name" %>
-</p>
+		<%= event.label :date, "Date"%>
+		<%= event.date_field :date %>
 
-<p>
-<%= event.submit "Create Event" %>
-</p>
+		<%= event.label :time, "Time"%>
+		<%= event.time_field :time %>
 
-<%end%>
+		<%= event.submit "Create Event" %>
+
+	<%end%>
+
+</div>

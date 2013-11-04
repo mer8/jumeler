@@ -1,51 +1,26 @@
 <% if current_user %>
-	You're already logged ya freak!!!!
-<% end %>
-
-
-<h1>Create a New User</h1>
-<%=form_for @user do |user|%>
-
-<p>
-	<%=user.label :username, "Username"%>
-	<%=user.text_field :username, :placeholder => "Enter your username"%>
-
-<p>
-	<%=user.label :email, "Email"%>
-	<%=user.text_field :email, :placeholder => "Enter your email" %>
-</p>
-
-<p>
-	<%=user.label :password, "Password"%>
-	<%=user.text_field :password, :placeholder => "Enter password" %>
-</p>
-
-<p>
-	<%=user.label :password_confirmation, "Password Confirmation"%>
-	<%=user.text_field :password_confirmation, :placeholder => "Re-enter password" %>
-</p>
-
-<p>
-<%= user.submit %>
-</p>
-
-
+	Whoa Nelly! You're already logged in!!
 <% end %>
 
 
 
+<div class="createuser">
+	<h1>Create a New User</h1>
+	<%=form_for @user do |user|%>
+		<%=user.text_field :username, :placeholder => "Enter your username"%><br>
+		<%=user.text_field :email, :placeholder => "Enter your email" %><br>
+		<%=user.password_field :password, :placeholder => "Enter password" %><br>
+		<%=user.password_field :password_confirmation, :placeholder => "Re-enter password" %><br>
+	<%= user.submit "Create New User" %>
+	<% end %>
+</div>
 
 
-<% if current_user %>
-	Guess what, you're logged in as <%= current_user.email %>!
-<% end %>
 
 
-<% if current_user %>
-	Guess what, you're logged in as <%= current_user.email %>!
-<% end %>
+
 <hr />
-User id: <%= session[:user_id] %>
+
 
 
 
