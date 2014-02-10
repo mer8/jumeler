@@ -26,15 +26,17 @@ class AuthenticationsController < ApplicationController
 		        else
 		          
 		          # render :new
+		          flash.now[:alert] = 'Alert message!'
 		          redirect_to authentications_new_url
-		          flash.now.alert = "Unable to sign you in. Please try again."
+		          # flash.now.alert = "Unable to sign you in. Please try again."
 		        end
 	    	end
 	    else
 		          
 		          # render :new
+		          flash.now[:alert] = 'Alert message!'
 		          redirect_to authentications_new_url
-		          flash.now.alert = "Unable to sign you in. Please try again."
+		          # flash.now.alert = "Unable to sign you in. Please try again."
 	    end
 	end
 
