@@ -1,28 +1,26 @@
  <div id="indexcontainer"> 
   <h1>List of events</h1>
-
-<table>
-  <tr>
-    <th>Date</th>
-    <th>Time</th>
-    <th>Name</th>
-    <th></th>
-  </tr>
-  <% @events.each do |event| %>
-  
+  <table>
     <tr>
-      <td><%= event.date %></td>
-      <td><%= event.time %></td>
-      <td><a href='/events/edit/<%= event.id%>'> <%= event.name %> </a></td>
-      <td>
-        <div id="eventsbuttons">
-        <% if (current_user.is_admin) || (current_user.uevents.include? event) %>
-        <%= button_to "DELETE", { action: "destroy", id: event.id}, {method: :delete, data:{confirm:"Are you damned sure???"}, :class => "mybutton"}%>
-        <%= link_to 'EDIT', edit_event_path(event), :class => "mybutton" %>
-      </div>
-      <% end %>
-    </td>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Name</th>
+      <th></th>
     </tr>
-  <% end %>
-</table>
+    <% @events.each do |event| %>
+    <tr>
+        <td><%= event.date %></td>
+        <td><%= event.time %></td>
+        <td><a href='/events/edit/<%= event.id%>'> <%= event.name %> </a></td>
+        <td>
+          <div id="eventsbuttons">
+          <% if (current_user.is_admin) || (current_user.uevents.include? event) %>
+          <%= button_to "DELETE", { action: "destroy", id: event.id}, {method: :delete, data:{confirm:"Are you damned sure???"}, :class => "mybutton"}%>
+          <%= link_to 'EDIT', edit_event_path(event), :class => "mybutton" %>
+          </div>
+        <% end %>
+        </td>
+    </tr>
+    <% end %>
+  </table>
 </div>

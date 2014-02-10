@@ -15,7 +15,7 @@ a:link, a:visited, a:disabled {
 }
 
 #container {
-	background-color: #eee;
+	background-color: #FFFFFF;
 	width: 600px;
 	margin: 0 auto;	
 }
@@ -28,8 +28,21 @@ header {
 }
 
 #headerimg {
-	float: left bottom;
+	float: left;
+}
 
+#headertext {
+	text-shadow:     
+	-1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; ;
+	font-family: 'Lily Script One', cursive;
+	color: #9E9E9E;
+	font-size: 67px;
+	float: right;
+	padding-top: 56px;
+	padding-right: 200px;
 }
 #indexcontainer {
 
