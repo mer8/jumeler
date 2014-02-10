@@ -15,8 +15,6 @@ class AuthenticationsController < ApplicationController
 
 	def create
 		if params[:user][:email].present?
-			
-		
 		    	user = User.find_by(email: params[:user][:email])
 		    	if user
 		        # authenticate user
@@ -26,13 +24,17 @@ class AuthenticationsController < ApplicationController
 
 
 		        else
+		          
+		          # render :new
+		          redirect_to authentications_new_url
 		          flash.now.alert = "Unable to sign you in. Please try again."
-		          render :new
 		        end
 	    	end
 	    else
+		          
+		          # render :new
+		          redirect_to authentications_new_url
 		          flash.now.alert = "Unable to sign you in. Please try again."
-		          render :new
 	    end
 	end
 
