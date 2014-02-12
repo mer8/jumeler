@@ -26,17 +26,21 @@ class AuthenticationsController < ApplicationController
 		        else
 		          
 		          # render :new
-		          flash.now[:alert] = 'Alert message!'
+		          flash[:notice] = 'Your password is incorrect! Please try again.'
 		          redirect_to authentications_new_url
 		          # flash.now.alert = "Unable to sign you in. Please try again."
 		        end
 	    	end
-	    else
+
+	    	#Commented this out below bc. authentication seems to be working without it. Please delete later.
+	    # else
 		          
-		          # render :new
-		          flash.now[:alert] = 'Alert message!'
-		          redirect_to authentications_new_url
-		          # flash.now.alert = "Unable to sign you in. Please try again."
+		   #        # render :new
+		   #        flash.now[:alert] = 'Alert message!'
+		   #        redirect_to authentications_new_url
+		   #        # flash.now.alert = "Unable to sign you in. Please try again."
+
+
 	    end
 	end
 

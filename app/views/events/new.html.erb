@@ -1,8 +1,7 @@
 <div class="newevent">
 <h1>Enter a new event.</h1>
 	<%= form_for @event do |event| %>
-		Event ID is: <%= @event.id %><br>
-
+		
 		<%= event.label :name, "Name"%>
 		<%= event.text_field :name, :placeholder => "Event name" %>
 

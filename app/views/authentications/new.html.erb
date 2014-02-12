@@ -6,3 +6,7 @@
 	<%= user.submit "Log In" %>
 	<%end%>
 </div>
+
+<% if flash[:notice] %>
+    <div id="notice"><%= flash[:notice] %></div>
+<% end %>
